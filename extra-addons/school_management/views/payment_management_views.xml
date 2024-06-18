@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_paymentplan_tree">
+            <field name="name">School PaymentPlan List</field>
+            <field name="model">school.paymentplan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="amount_plan" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_studentplan_tree">
+            <field name="name">School StudentPlan List</field>
+            <field name="model">school.studentplan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="student_name" />
+                    <field name="payment_plan" />
+                    <field name="date_save" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_payments_tree">
+            <field name="name">School Payments List</field>
+            <field name="model">school.payments</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_payment" />
+                    <field name="total_amount" />
+                    <field name="student_name" />
+                    <field name="payment_plan_name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_paymentplan">
+            <field name="name">Payment Plan</field>
+            <field name="res_model">school.paymentplan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <record model="ir.actions.act_window" id="action_studentplan">
+            <field name="name">Student Plan</field>
+            <field name="res_model">school.studentplan</field>
+            <field name="view_mode">tree,form</field>
+        </record>        
+
+        <record id="action_payments" model="ir.actions.act_window">
+            <field name="name">Payments</field>
+            <field name="res_model">school.paymentplan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_payments" name="Payments" parent="menu_payment_management" action="action_payments"/>
+        <menuitem id="menu_studentplan" name="Payment Plan" parent="menu_payment_management" action="action_studentplan"/>
+        <menuitem id="menu_paymentplan" name="Student Payment Plan" parent="menu_payment_management" action="action_paymentplan"/>
+    </data>
+</odoo>
+    <!-- <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">school.payment.form</field>
+        <field name="model">school.payment</field>
+        <field name="arch" type="xml">
+            <form string="Payment">
+                <sheet>
+                    <group>
+                        <field name="payment_plan_id"/>
+                        <field name="amount"/>
+                        <field name="date_of_payment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">school.payment.tree</field>
+        <field name="model">school.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Payments">
+                <field name="payment_plan_id"/>
+                <field name="amount"/>
+                <field name="date_of_payment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">school.payment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_payment" name="Payments" parent="menu_payment_management" action="action_payment"/> -->

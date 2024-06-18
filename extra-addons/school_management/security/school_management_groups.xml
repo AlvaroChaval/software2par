@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_school_management_admin" model="res.groups">
+        <field name="name">School Management Admin</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <record id="group_school_management_user" model="res.groups">
+        <field name="name">School Management User</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_student_tree">
+            <field name="name">school list</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="birthdate" />
+                    <field name="ci" />
+                    <field name="name" />
+                    <field name="cellphone" />
+                    <field name="tutor_principal" />
+                    <field name="tutor_secundary" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_tutor_tree">
+            <field name="name">School Tutor List</field>
+            <field name="model">school.tutor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="last_name" />
+                    <field name="cellphone" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_enrollment_tree">
+            <field name="name">Enrollment</field>
+            <field name="model">school.enrollment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_of_enrollment" />
+                    <field name="course_id" />
+                    <field name="student_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_student" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_tutor" model="ir.actions.act_window">
+            <field name="name">Tutor</field>
+            <field name="res_model">school.tutor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_enrollment" model="ir.actions.act_window">
+            <field name="name">Enrollment</field>
+            <field name="res_model">school.enrollment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_student" name="Students" parent="menu_student_management" action="action_student"/>
+        <menuitem id="menu_tutor" name="Tutor" parent="menu_student_management" action="action_tutor"/>
+        <menuitem id="menu_enrollment" name="Enrollment" parent="menu_student_management" action="action_enrollment"/>
+    </data>
+</odoo>
+    <!-- <record id="view_student_form" model="ir.ui.view">
+        <field name="name">school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="birthdate"/>
+                        <field name="enrollment_ids" widget="one2many_list"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_student_tree" model="ir.ui.view">
+        <field name="name">school.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree string="Students">
+                <field name="name"/>
+                <field name="birthdate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>-->
+
+    
+    <!-- <menuitem id="menu_student" name="Students" parent="menu_student_management" action="action_student"/>  -->
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_subject_tree">
+            <field name="name">School Subject List</field>
+            <field name="model">school.subject</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />                
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_school_tree">
+            <field name="name">School</field>
+            <field name="model">school.school</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="address" />
+                    <field name="cellphone" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_classroom_tree">
+            <field name="name">Classroom</field>
+            <field name="model">school.classroom</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="capacity" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_course_tree">
+            <field name="name">Course</field>
+            <field name="model">school.course</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="parallel" />
+                    <field name="level" />
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_cycle_tree">
+            <field name="name">School Cycle List</field>
+            <field name="model">school.cycle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="duration" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_school" model="ir.actions.act_window">
+            <field name="name">School</field>
+            <field name="res_model">school.school</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_course" model="ir.actions.act_window">
+            <field name="name">Course</field>
+            <field name="res_model">school.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_classroom" model="ir.actions.act_window">
+            <field name="name">Classroom</field>
+            <field name="res_model">school.classroom</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_subject" model="ir.actions.act_window">
+            <field name="name">Subject</field>
+            <field name="res_model">school.subject</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_cycle" model="ir.actions.act_window">
+            <field name="name">Cycle</field>
+            <field name="res_model">school.cycle</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_school" name="School" parent="menu_school_infrastructure" action="action_school"/>
+        <menuitem id="menu_course" name="Course" parent="menu_school_infrastructure" action="action_course"/>
+        <menuitem id="menu_classroom" name="Classroom" parent="menu_school_infrastructure" action="action_classroom"/>
+        <menuitem id="menu_subject" name="Subject" parent="menu_school_infrastructure" action="action_subject"/>
+        <menuitem id="menu_cycle" name="Cycle" parent="menu_school_infrastructure" action="action_cycle"/>        
+    </data>
+</odoo>
+    <!-- <record id="view_classroom_form" model="ir.ui.view">
+        <field name="name">school.classroom.form</field>
+        <field name="model">school.classroom</field>
+        <field name="arch" type="xml">
+            <form string="Classroom">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="capacity"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_classroom_tree" model="ir.ui.view">
+        <field name="name">school.classroom.tree</field>
+        <field name="model">school.classroom</field>
+        <field name="arch" type="xml">
+            <tree string="Classrooms">
+                <field name="name"/>
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_classroom" model="ir.actions.act_window">
+        <field name="name">Classrooms</field>
+        <field name="res_model">school.classroom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_classroom" name="Classrooms" parent="menu_school_infrastructure" action="action_classroom"/> -->

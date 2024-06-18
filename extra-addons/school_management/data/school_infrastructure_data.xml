@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="school_course_mathematics" model="school.course">
+        <field name="name">Mathematics</field>
+        <field name="description">Mathematics course description</field>
+    </record>
+    
+    <record id="school_course_science" model="school.course">
+        <field name="name">Science</field>
+        <field name="description">Science course description</field>
+    </record>
+    
+    <record id="school_classroom_101" model="school.classroom">
+        <field name="name">Classroom 101</field>
+        <field name="capacity">30</field>
+    </record>
+
+    <!-- <record id="school_cycle_bimester" model="school.cycle">
+        <field name="name">Bimester</field>
+        <field name="type">bimester</field>
+    </record> -->
+</odoo>

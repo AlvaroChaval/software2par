@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_schedule_form" model="ir.ui.view">
+        <field name="name">school.schedule.form</field>
+        <field name="model">school.schedule</field>
+        <field name="arch" type="xml">
+            <form string="Schedule">
+                <sheet>
+                    <group>                        
+                        <field name="teacher_id"/>
+                        <field name="classroom_id"/>
+                        <field name="start_time"/>
+                        <field name="end_time"/>
+                        <field name="day_of_week"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_schedule_course_form" model="ir.ui.view">
+        <field name="name">school.schedule.course.form</field>
+        <field name="model">school.schedule.course</field>
+        <field name="arch" type="xml">
+            <form string="Schedule Course">
+                <sheet>
+                    <group>                        
+                        <field name="year"/>
+                        <field name="schedule_id"/>
+                        <field name="course_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_schedule_tree" model="ir.ui.view">
+        <field name="name">school.schedule.tree</field>
+        <field name="model">school.schedule</field>
+        <field name="arch" type="xml">
+            <tree string="Schedules">
+                <field name="teacher_id"/>
+                <field name="classroom_id"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="day_of_week"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_schedule_course_tree" model="ir.ui.view">
+        <field name="name">school.schedule.course.tree</field>
+        <field name="model">school.schedule.course</field>
+        <field name="arch" type="xml">
+            <tree string="Schedules Courses">
+                <field name="year"/>
+                <field name="schedule_id"/>
+                <field name="course_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_schedule" model="ir.actions.act_window">
+        <field name="name">Schedules</field>
+        <field name="res_model">school.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_schedule_course" model="ir.actions.act_window">
+        <field name="name">Schedules Courses</field>
+        <field name="res_model">school.schedule.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_schedule" name="Schedules" parent="menu_school_schedule" action="action_schedule"/>
+    <menuitem id="menu_schedule_course" name="Schedules Courses" parent="menu_school_schedule" action="action_schedule"/>
+</odoo>

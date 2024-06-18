@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_teacher_tree">
+            <field name="name">school Teacher List</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="title" />
+                    <field name="ci" />
+                    <field name="cellphone" />
+                    <field name="hire_date" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_teaching_load_tree">
+            <field name="name">School Teaching Load List</field>
+            <field name="model">school.teaching.load</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="hours_per_week" />
+                    <field name="hours_total" />
+                    <field name="teacher_id" />
+                    <field name="subject_id" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_teacher" model="ir.actions.act_window">
+            <field name="name">Teachers</field>
+            <field name="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_teaching_load" model="ir.actions.act_window">
+            <field name="name">Teaching Load</field>
+            <field name="res_model">school.teaching.load</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_teacher" name="Teachers" parent="menu_teacher_management" action="action_teacher"/>
+        <menuitem id="menu_teaching_load" name="Teaching Load" parent="menu_teacher_management" action="action_teaching_load"/>
+    </data>  
+</odoo>
+    <!-- <record id="view_teacher_form" model="ir.ui.view">
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="subject_ids" widget="many2many_tags"/>
+                        <field name="schedule_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_teacher_tree" model="ir.ui.view">
+        <field name="name">school.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="Teachers">
+                <field name="name"/>
+                <field name="subject_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_teacher" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_teacher" name="Teachers" parent="menu_teacher_management" action="action_teacher"/> -->

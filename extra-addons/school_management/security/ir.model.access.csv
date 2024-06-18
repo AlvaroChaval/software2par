@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_classroom,access_school_classroom,model_school_classroom,,1,1,1,1
+access_school_course,access_school_course,model_school_course,,1,1,1,1
+access_school_cycle,access_school_cycle,model_school_cycle,,1,1,1,1
+access_school_subject,access_school_subject,model_school_subject,,1,1,1,1
+access_school_schedule,access_school_schedule,model_school_schedule,,1,1,1,1
+access_school_schedule_course,access_school_schedule_course,model_school_schedule_course,,1,1,1,1
+access_school_teacher,access_school_teacher,model_school_teacher,,1,1,1,1
+access_school_teaching_load,access_school_teaching_load,model_school_teaching_load,,1,1,1,1
+access_school_student,access_school_student,model_school_student,,1,1,1,1
+access_school_tutor,access_school_tutor,model_school_tutor,,1,1,1,1
+access_school_enrollment,access_school_enrollment,model_school_enrollment,,1,1,1,1
+access_school_paymentplan,access_school_paymentplan,model_school_paymentplan,,1,1,1,1
+access_school_studentplan,access_school_studentplan,model_school_studentplan,,1,1,1,1
+access_school_payments,access_school_payments,model_school_payments,,1,1,1,1
+access_school_grade,access_school_grade,model_school_grade,,1,1,1,1
+access_school_school,access_school_school,model_school_school,,1,1,1,1

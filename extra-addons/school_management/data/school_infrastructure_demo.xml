@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <data>
+            <record id="demo_teacher_john_doe" model="school.teacher">
+                <field name="name">Alvaro Rojas</field>
+                <field name="description">Experiencia en matematicas</field>
+                <field name="title">Professor</field>
+                <field name="ci">11111111</field>
+                <field name="cellphone">7805522</field>
+                <field name="hire_date">2024-01-01</field>
+                <!-- <field name="subject_ids" eval="[(6, 0, [ref('school_course_mathematics')])]"/> -->
+            </record>
+            <!-- Otros registros -->
+        </data>
+
+        <record id="demo_student_jane_smith" model="school.student">
+            <field name="name">Alvaro machuca</field>
+            <field name="birthdate">2005-08-15</field>
+        </record>
+    </data>
+</odoo>

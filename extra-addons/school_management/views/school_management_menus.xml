@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_school_management" name="School Management" sequence="1"/>
+
+        <menuitem id="menu_school_infrastructure" name="Infrastructure" parent="menu_school_management" sequence="1"/>
+        <menuitem id="menu_school_schedule" name="Schedule" parent="menu_school_management" sequence="2"/>
+        <menuitem id="menu_teacher_management" name="Teachers" parent="menu_school_management" sequence="3"/>
+        <menuitem id="menu_student_management" name="Students" parent="menu_school_management" sequence="4"/>
+        <menuitem id="menu_payment_management" name="Payments" parent="menu_school_management" sequence="5"/>
+        <menuitem id="menu_grades_management" name="Grades" parent="menu_school_management" sequence="6"/>
+    </data>
+</odoo>
